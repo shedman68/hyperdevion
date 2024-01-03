@@ -1,0 +1,34 @@
+# Fantasy Character Finder
+print("Fantasy Character Finder")
+print("--")
+
+# Initialize a variable to keep track of the character
+character = None
+
+# Question 1
+answer = input("Do you feel at home in the forest? (Yes/No): ")
+if answer.lower() == 'yes':
+    character = "Elf"
+    print("You might be an Elf, at one with nature!")
+
+# Question 2
+if character is None:
+    answer = input("Do you have a fascination with treasures and craftsmanship? (Yes/No): ")
+    if answer.lower() == 'yes':
+        character = "Dwarf"
+        print("Aha, you could be a Dwarf, a master of the forge!")
+
+# Question 3
+if character is None:
+    answer = input("Do you seek knowledge and arcane wisdom? (Yes/No): ")
+    if answer.lower() == 'yes':
+        character = "Wizard"
+        print("Enigmatic! You're likely a Wizard, seeker of the arcane!")
+
+# Final check
+if character is None:
+    print("Hmm, it seems you don't fit into the typical archetypes of this fantasy world.")
+
+# Final message
+if character is not None:
+    print(f"Welcome to the world of fantasy, noble {character}!")
