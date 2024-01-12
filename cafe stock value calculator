@@ -1,0 +1,21 @@
+cafe_List = ['coffee', 'cake', 'tea', 'juice']
+stock_dict = {
+    "coffee": 100,  # 100 units of coffee in stock
+    "cake": 50,     #  50 cakes in stock
+    "tea": 200,     #  200 units of tea in stock
+    "juice": 80     #  80 units of juice in stock
+}
+price_dict = {
+    "coffee": 2.5,  # 2.5 dollars per coffee
+    "cake": 5.0,    # 5.0 dollars per cake
+    "tea": 1.5,     # 1.5 dollars per tea
+    "juice": 3.0    # 3.0 dollars per juice
+}
+
+# calculating total stock worth
+total_stock_value = 0
+for item in cafe_List:
+  item_value = stock_dict[item] * price_dict[item]
+  total_stock_value += item_value
+
+print("Total value of stock:", total_stock_value)
