@@ -1,0 +1,29 @@
+def hotel_cost(num_nights):
+    price_per_night = 100  # Example price per night
+    return num_nights * price_per_night
+
+def plane_cost(city_flight):
+    flight_costs = {
+        'Geneva': 200,
+        'Istanbul': 300,
+        'Cairo': 400
+    }
+    return flight_costs.get(city_flight, 0)  # Returns 0 if city is not in the dictionary
+
+def car_rental(rental_days):
+    daily_rental_cost = 40  # Example daily rental cost
+    return rental_days * daily_rental_cost
+
+def holiday_cost(num_nights, city_flight, rental_days):
+    return hotel_cost(num_nights) + plane_cost(city_flight) + car_rental(rental_days)
+
+# User Inputs
+print("Please choose your flight destination from: Geneva, Istanbul, Cairo")
+city_flight = input("Enter the city you will be flying to: ")
+num_nights = int(input("How many nights will you stay at the hotel? "))
+rental_days = int(input("For how many days will you rent a car? "))
+
+# Calculate Total Holiday Cost
+total_cost = holiday_cost(num_nights, city_flight, rental_days)
+
+print(f"Your total holiday cost is: £{total_cost}")
