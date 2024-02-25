@@ -1,2 +1,2 @@
-# hyperdevion
-Projects I built during the hyperdevion data science bootcamp
+# hyperiondev
+Projects I built during the hyperiondev data science bootcamp
