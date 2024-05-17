@@ -1,5 +1,3 @@
-﻿# PLEASE ENSURE YOU OPEN THIS FILE IN VS CODE.
-
 # *** NOTE ON COMMENTS ***
 # This is a comment in Python.
 # Comments can be placed anywhere in Python code and the computer ignores them -- they are intended to be read by humans.
@@ -7,62 +5,102 @@
 # Please read all the comments in this example file and all others.
 
 
-
-# ============= for Loops ==================
-# Programmers don't want to have to copy and paste the same statement over and over again.
-# Just like a while loop, a for loop allows statements to be repeated a number of times.
-
 # ************ Example 1 ************
+# Comparing Numbers
+
 print("Example 1: ")
-for i in range(1, 10):
-        print(i)
+
+num1 = 10
+num2 = 20
+
+if num1 >= num2:        # 'greater than or equal to'
+       print("It's not possible that 10 is bigger than or equal to 20.")
+elif num1 <= num2:      # 'less than or equal to'
+       print("10 is less than or equal to 20." )
+elif num1 != num2:      # 'not equal to'
+       print("This is also true since 10 isn't equal to 20, but the elif statement before comes first and is true so Python will execute that!")
+elif num1 == num2 :       # 'equal'
+       print("Will never execute this print statement...")
+
 
 # Explanation:
-# This for loop prints the numbers 1 to 9. Again, note the indentation and the colon, just like in the if statement.
-# In this for loop, when the variable i (which is an integer) is in the range of 1 to 10 (i.e. either 1, 2, 3 ,4 ,5 ,6 ... or 9), the code under the for loop will execute.
-# range(1, 10) specifies that i = 1 in the first iteration of the loop.
-# Through each iteration of the loop i will be increased by 1 until i is 10 and therefore not in the range (1,10).
-# The loop will then stop executing.
-
+# The program will check the first part of the if statement (is num 1 bigger than or equal to num 2?).
+# If it is not, then it goes into the first 'elif' statement and checks if num1 is less than or equal to num2.
+# If it is not then it goes into the next 'elif' statement...etc.
 
 
 # ************ Example 2 ************
-# You can use an if statement within a for loop!
+# Comparing Strings
+
 print("Example 2: ")
-for i in range (1, 10):
-        if i > 5:
-                print(i)
+my_name = "Tom"
 
-# This will only print the numbers 6, 7, 8 and 9 because no action is taken for numbers less than or equal to 5.
+if my_name == "Tom":
+       print("Hey Tom!")
 
-# ================ Nested Loops ==================
+
+# ========= Logical Operators  ===========
 
 # ************ Example 3 ************
-# This example prints out the first 5 multiples of numbers 1 to 5
+# Example of an 'and' condition:
 
 print("Example 3: ")
+my_name = "Tom"
+my_favourite_colour = "orange"
 
-for x in range(1, 6):
-    for y in range(1, 6):
-        print('{} * {} = {}'.format(x, y, x * y))
-    print("")
+if my_name == "Tom" and my_favourite_colour == "orange":
+        print("Your name is Tom and your favourite colour is orange.")
+else:
+        print("Your name isn't Tom or your favourite colour isn't orange.")
 
-# Run this program to see the output
 
-# ============= Nested if Statements ==================
-# You can also nest if statements either within another if statement or within a loop
+# Explanation:
+# If my_name
+# is Tom and my_favourite_colour is orange, then the if statement's print statement will execute.
+# Both conditions need to be met otherwise the else statement and its' print statement will execute.
+
 
 # ************ Example 4 ************
-# Nested if statements
-print("Example 4: ")
-name = "B"
-if name == "A":
-        if name == "B":
-                print("It isn't possible for this code to execute - how can the variable name be two things at once?")
-else:
-        print("Your name isn't A but I can't automatically assume from that that it is B.")
+#Example of an 'or' condition:
 
-# Think about this one logically! Note the indentation carefully. You have an if within an if and then an else.
+print("Example 4: ")
+item = "chair"
+
+if item == "dog" or len(item) == 5:
+       print("Either item is a dog, or the length of your item is 5.")
+
+# Explanation:
+# If item is dog or the length of item is 5, the print statement will execute
+# At least one of the conditions need to be met otherwise print statement will not execute.
+
+
+# ************ Example 5 ************
+#Example of a 'not' condition:
+
+print("Example 5: ")
+has_traffic_fines = False
+
+if not has_traffic_fines:
+    print("You are a good driver.")
+
+# Explanation:
+# If has_traffic_fines is false the print statement will execute
+# By adding the not operator, the has_traffic_fines variable is interpreted as being true when it is actually false
+
+
+
+# ************ Example 6 ************
+print("Example 6: ")
+
+if item == "dog" or len(item) == 5:                 #Branch 1
+        print("Either item is a dog, or the len of your item is 5.")
+elif item == "chair" and len(item) == 5:             #Branch 2
+       print("Your item is both a chair and len of item is 5.")
+
+# When you run the above code, what will be the output? Run this program and find out!
+# Remember only one branch of the if statement will execute, even if multiple branch conditions are 'true'.
+
 
 # ****************** END OF EXAMPLE CODE ********************* #
+
 
